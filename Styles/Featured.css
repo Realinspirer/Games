@@ -75,6 +75,12 @@
 
 }
 
+.all_games_desc{
+    margin: calc(var(--margin_sides) * 1.7) var(--margin_sides) calc(var(--margin_sides) * 1.1) var(--margin_sides);
+    color: var(--button_accent_color);
+    font-size: clamp(0.8em, 4vw, 1.5em);
+}
+
 @keyframes shine_anim{
     0%{
         transform: translate(-100%);

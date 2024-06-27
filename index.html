@@ -6,12 +6,17 @@
     <title>Realinspirer - Games</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="/Scripts/script.js"></script>
+    <script src="/Scripts/Normal_sections_generator/Normal_section_gen.js"></script>
+    <script src="Scripts/Current_generator.js"></script>
     <link rel="icon" href="/Images/logo.svg">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/Styles/Hamburger_nav_icon_style.css">
     <link rel="stylesheet" href="/Styles/Footer.css">
-    <link rel="stylesheet" href="Styles/Featured.css">
     <link rel="stylesheet" href="/Styles/Hire_div.css">
+    <link rel="stylesheet" href="/Styles/Items_section_style.css">
+    <link rel="stylesheet" href="/Styles/Items_normal.css">
+    <link rel="stylesheet" href="Styles/Featured.css">
+    <link rel="stylesheet" href="Styles/Games_section.css">
 </head>
 <body>
 
@@ -59,20 +64,52 @@
         <div class="game_feat">
             <img src="/Images/back1.png" alt="game_cover">
             <div class="game_grad"></div>
-            <p class="title">New release
+            <h1 class="title">New release
                 <span>Banana Bounce!</span>
-            </p>
+            </h1>
         </div>
         <div class="game_feat">
             <img src="/Images/Discover_section/vector_img.png" alt="game_cover">
             <div class="game_grad"></div>
-            <p class="title">Featured
+            <h1 class="title">Featured
                 <span>Heck's Kitchen!</span>
-            </p>
+            </h1>
         </div>
     </div>
 
     <!-- featured section end -->
+
+    <h2 class="all_games_desc">Play all games made by Realinspirer</h2>
+    <div class="items_grid items_grid_narrow_0 items_grid" id="all_games_section">
+        <div class="item_normal">
+            <img src="/Images/Featured_section/Banana_bounce.png" alt="icon">
+            <div class="items_text">
+                <p class="item_normal_title">Banana Bounce</p>
+                <p class="item_normal_subtitle">Runner</p>
+                <p class="item_normal_desc">A game based on real life</p>
+                <a class="normal_button">Play now</a>
+            </div>
+        </div>
+        
+        <div class="feat_sec first_feat">
+            <img src="/Images/back1.png" alt="cover">
+            <h3 class="title">Discover several powerups!
+                <span>Banana Bounce!</span>
+            </h3>
+            <div class="hover_text">
+                <p>Play now!</p>
+            </div>
+        </div>
+        <div class="feat_sec second_feat">
+            <img src="/Images/Featured_section/bb_assets.png" alt="cover">
+            <h3 class="title">Let the story unfold
+                <span>Heck's Kitchen!</span>
+            </h3>
+            <div class="hover_text">
+                <p>Play now!</p>
+            </div>
+        </div>
+    </div>
 
 
     <!-- hire_section -->

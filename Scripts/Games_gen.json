@@ -46,5 +46,13 @@
         "image_url":"\\Images\\Normal_section\\dr.png",
         "button_text":"Play now",
         "click_url":""
-    }
+    },
+    {
+        "title":"INVERSION 2048",
+        "subtitle":"Games • Puzzles",
+        "description":"2048 but twisty!",
+        "image_url":"\\Images\\Normal_section\\dr.png",
+        "button_text":"Play now",
+        "click_url":""
+    }   
 ]

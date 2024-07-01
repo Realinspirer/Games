@@ -1,0 +1,123 @@
+.game_div, .game_div *{
+    margin: initial;
+}
+.game_div{
+    border-radius: var(--big_border_radius);
+    width: 72%;
+    height: clamp(300px, 100vw, 600px);
+    margin: var(--margin_sides);
+    font-size: clamp(0.7em,3.733vw,1em);
+
+
+    /* width: calc(100% - var(--margin_sides) * 2 ); */
+    
+
+    background-image: linear-gradient(90deg, #59ef90, #64b7ff);
+    overflow: hidden;
+    background-size: 200%;
+    float: left;
+    animation: back_anim 10s infinite linear;
+
+    --size_image:10em;
+    --accent_col:var(--button_hover_color);
+    --hover_col:var(--button_accent_color)
+}
+
+@keyframes back_anim {
+    0%{
+        background-position: 0%;
+    }
+    25%{
+        background-position: 100%;
+    }
+    50%{
+        background-position: 0%;
+    }
+    75%{
+        background-position: 100%;
+    }
+    100%{
+        background-position: 0%;
+    }
+
+}
+.Play_now_div{
+    /* backdrop-filter: blur(15px); */
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(transparent, #00000065);
+   
+}
+
+.Play_now_div img{
+    width: var(--size_image);
+    height: var(--size_image);
+    object-fit: cover;
+    overflow: hidden;
+    display: block;
+    border-radius: var(--big_border_radius);
+    filter: drop-shadow(0 0 10px #595959);
+}
+.Play_now_div .normal_button{
+    width: calc(var(--size_image) + 2em);
+    text-align: center;
+    overflow: visible;
+    
+    --button_hover_color: var(--hover_col);
+    --button_accent_color: var(--accent_col);
+    --shadow_col: white;
+
+    animation: drop_shadow_keyframe 2s infinite;
+    
+    
+    /* background-size: 150%; */
+}
+@keyframes drop_shadow_keyframe {
+    0%{
+        filter:drop-shadow(0 0 var(--base_blur_amount) var(--shadow_col));
+    }
+    50%{
+        filter:drop-shadow(0 0 2px var(--shadow_col));
+    }
+    100%{
+        filter:drop-shadow(0 0 var(--base_blur_amount) var(--shadow_col));
+    }
+}
+.Play_now_div .normal_button:hover{
+    --shadow_col:#ffe23d;
+}
+.Play_now_div .normal_button:hover::before{
+    border-radius: inherit;
+}
+.Play_now_div .normal_button span{
+    position: absolute;
+    top: -8%;
+    bottom: -8%;
+    right: -2.2%;
+    left: -2.2%;
+    border-radius: inherit;
+    z-index: -2;
+    background-image: linear-gradient(90deg,#f3a63a, #d28116);
+    /* background-image: linear-gradient(90deg,#4c4cf2, #fa5353); */
+    background-size: 150%;
+    background-origin: border-box;
+    animation: back_anim 5s infinite cubic-bezier(.14,.18,.33,.91);
+}
+.play_stuffs{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.play_stuffs .subtitle{
+    color:#f8f8f8df;
+
+}
+@media screen and (max-width:1150px) {
+    .game_div{
+        width: calc(100% - var(--margin_sides) * 2 );
+        float: none;
+    }
+}

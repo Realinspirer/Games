@@ -29,8 +29,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* height: 27rem; */
-    height: clamp(10rem, 43vw, 27rem);
-    font-size: clamp(0.48rem, 1.85vw, 1rem);
+    height: clamp(15rem, 80vw, 27rem);
+    font-size: clamp(0.5rem, 2.667vw, 1rem);
 }
 
 .game_feat img{

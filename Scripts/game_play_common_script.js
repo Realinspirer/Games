@@ -6,17 +6,20 @@ function set_scroll_data() {
 let is_full_screen = false;
 window.addEventListener("fullscreenchange", check_for_full_screen);
 function check_for_full_screen(event) {
+    console.log(is_full_screen);
     if (!document.fullscreenElement) {
         if (is_full_screen) {
-            Toggle_full_screen_mode();
+            Toggle_full_screen_mode(false);
         }
     }
 }
-function Toggle_full_screen_mode() {
+function Toggle_full_screen_mode(do_toggle = true) {
     is_full_screen = !is_full_screen;
     document.body.classList.toggle("fullscreen");
     var text_element = document.getElementById("full_sc_text");
-    toggle_full_screen();
+    if (do_toggle) {
+        toggle_full_screen();
+    }
     if (is_full_screen) {
         window.scrollTo({
             top: 0,

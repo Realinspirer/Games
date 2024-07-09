@@ -1,4 +1,3 @@
-
 .game_parent, .game_parent *{
     margin: initial;
 }
@@ -124,6 +123,16 @@
 }
 
 
+.game_div.hidden{
+    background-image: none;
+}
+.game_div.hidden .Play_now_div{
+    display: none;
+}
+.game_div.hidden #game_frame{
+    z-index: initial;
+}
+
 
 .side_div{
     width: 25%;
@@ -162,6 +171,9 @@
     margin: 0;
     background-repeat: no-repeat;
     transition: var(--base_anim_speed);
+}
+.side_ele_div.normal_button.full_screen p::after{
+    background-image: url(/Images/full_screen.png);
 }
 .side_ele_div.normal_button:hover p:after{
     width: 1.1em;
@@ -284,7 +296,165 @@
 
 /* title desc end */
 
+/* iframe */
+.game_div{
+    position: relative;
+}
+.game_div iframe{
+    border: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    z-index: -1;
+}
 
+/* iframe end */
+
+
+/* full screen mode */
+body.fullscreen .game_parent .game_div{
+    height: 100vh;
+    /* margin-left: calc(var(--margin_sides) * -1 ); */
+    border-radius: 0;
+    width: 100%;
+}
+body.fullscreen .game_parent{
+    flex-direction: column;
+    margin:0;
+}
+body.fullscreen .game_parent > *  {
+    width: 100%;
+}
+body.fullscreen .game_parent .side_div{
+    padding-left: var(--margin_sides);
+    padding-right: var(--margin_sides);
+}
+body.fullscreen .logo_div{
+    /* display: none; */
+    transition: var(--base_anim_speed);
+    position: fixed;
+    z-index: 99;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* height: 6em; */
+    transform: translateY(-100%);
+    backdrop-filter: blur(var(--base_blur_amount));
+
+}
+html:not([data-scroll='0'])  body.fullscreen .logo_div{
+        transform: translateY(0);
+        background-color: #d5d5d598;
+        filter: drop-shadow(0 0 10px #494949);
+        /* background-color: red; */
+}
+body.fullscreen::-webkit-scrollbar{
+    display: none;
+    width: 0px;
+}
+::backdrop {
+    background-color: rgba(255,255,255,0);
+}
+
+/* .fullscreen.game_parent */
+
+
+/* scroll down thing */
+.scroll_down_div{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3.5em;
+    line-height: 4;
+    text-align: center;
+    -webkit-user-select: none;
+    user-select: none;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    background-image: linear-gradient(transparent, #ffffffc3);
+    color: var(--button_accent_color);
+    transform: translateX(100%);
+    font-size: clamp(0.75em,4vw,1.1em);
+    display: none;
+    animation: scroll_down 8s;
+}
+html:not([data-scroll='0'])  body.fullscreen .scroll_down_div{
+    display: none;
+}
+
+html[data-scroll='0']  body.fullscreen .scroll_down_div{
+    display: block;
+}
+
+
+.scroll_button{
+    height: 2.2em;
+    width: 2.2em;
+    background-color: white;
+    border-radius: 100%;
+    padding: 0.3em;
+    overflow: hidden;
+    filter: drop-shadow(0 0 var(--base_blur_amount) #939393);
+    position: fixed;
+    bottom: 0.9em;
+    right: 1.1em;
+    transition: var(--base_anim_speed);
+    cursor: pointer;
+    display: none;
+    animation: scale_in var(--base_anim_speed);
+    font-size: clamp(0.8em, 4.267vw,1em);
+}
+@keyframes scale_in {
+    0%{
+        transform: scale(0);
+    }
+    60%{
+        transform: scale(1.15);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+html[data-scroll='0']  body.fullscreen .scroll_button{
+    display: block;
+}
+
+.scroll_button:hover{
+    filter: drop-shadow(0 0 var(--big_blur_amount) #515151);
+}
+.scroll_button img{
+    
+    margin-top: 0.1em;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+@keyframes scroll_down {
+    0%{
+        transform: translateY(100%);
+    }
+    10%{
+        transform: translateY(0);
+    }
+    90%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+/* scroll down thing end  */
+
+
+/* full screen mode end */
 
 @media screen and (max-width:1150px) {
     .game_parent{

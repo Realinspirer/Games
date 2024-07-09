@@ -6,14 +6,16 @@
     <title>Banana Bounce! - Realinspirer - Games</title>
     <link rel="icon" href="/Images/logo.svg">
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="/Scripts/script.js"></script>
+
 
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/Styles/Hamburger_nav_icon_style.css">
     <link rel="stylesheet" href="/Styles/Footer.css">
     <link rel="stylesheet" href="/Styles/Hire_div.css">
     <link rel="stylesheet" href="../Styles/game_play_style.css">
+    <link rel="stylesheet" href="/Styles/Section_style.css">
+    <link rel="stylesheet" href="/Styles/Items_section_style.css">
+    <link rel="stylesheet" href="/Styles/Items_normal.css">
 
     
 </head>
@@ -57,17 +59,20 @@
     <!-- header end -->
 
     <div class="game_parent">
-        <div class="game_div">
+        
+        <div class="game_div" id="play_game_parent">
+            <iframe id="game_frame" title="Game frame"></iframe>
             <div class="Play_now_div">
                 <div class="play_stuffs">
                     <img src="/Images/Featured_section/Banana_bounce.png" alt="game_logo">
                     <p class="subtitle">Side Scrolling • Obstacles</p>
-                    <a class="normal_button">Play game<span></span></a>
+                    <a class="normal_button" onclick="run_main_frame()">Play game<span></span></a>
                 </div>
             </div>
         </div>
 
         <div class="side_div">
+            <a class="side_ele_div small normal_button full_screen" onclick="Toggle_full_screen_mode()"><p id="full_sc_text">Full screen mode</p></a>
             <div class="side_ele_div big cnt">
                 <p class="title">Controls</p>
                 <div class="controls">
@@ -94,9 +99,12 @@
                     </div>
                 </div>
             </div>
-            <a class="side_ele_div small normal_button"><p>Open in new tab</p></a>
+            <a class="side_ele_div small normal_button" onclick="open_in_new_tab()"><p>Open in new tab</p></a>
         </div>
     </div>
+    
+    <div class="scroll_down_div">Scroll down for more! ⬇️</div>
+    <div class="scroll_button"><img alt="down_arrow" src="/Images/down_svg.svg" onclick="scroll_down()"></div>
 
     <div class="title_desc_div">
         <h1 class="title">Banana Bounce!</h1>
@@ -118,6 +126,12 @@
             <br>
             Made with ❤️ by Realinspirer
         </div>
+    </div>
+
+
+    <div class="more_games_section">
+        <p class="section_text small" onclick="window.open('../', '_self')">MORE GAMES</p>
+        <div class="items_grid items_grid_narrow_0" id="more_games_sec"></div>
     </div>
 
     <!-- hire_section -->
@@ -201,4 +215,11 @@
     <!-- footer section end -->
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="/Scripts/script.js"></script>
+<script src="/Scripts/Normal_sections_generator/Normal_section_gen.js"></script>
+<script src="../Scripts/game_play_common_script.js"></script>
+<script src="script.js"></script>
+
 </html>

@@ -173,7 +173,7 @@
     transition: var(--base_anim_speed);
 }
 .side_ele_div.normal_button.full_screen p::after{
-    background-image: url(/Images/full_screen.png);
+    background-image: url(/Images/Full_screen.png);
 }
 .side_ele_div.normal_button:hover p:after{
     width: 1.1em;

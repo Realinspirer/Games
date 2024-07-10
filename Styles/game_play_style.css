@@ -162,7 +162,7 @@
 }
 .side_ele_div.normal_button p::after{
     content: "";
-    background-image: url(/Images/external.png);
+    background-image: url(/Images/Symbols/external.png);
     background-size: 100%;
     object-fit: contain;
     display: inline-block;
@@ -173,7 +173,7 @@
     transition: var(--base_anim_speed);
 }
 .side_ele_div.normal_button.full_screen p::after{
-    background-image: url(/Images/Full_screen.png);
+    background-image: url(/Images/Symbols/Full_screen.png);
 }
 .side_ele_div.normal_button:hover p:after{
     width: 1.1em;
@@ -191,6 +191,7 @@
 .side_ele_div .title{
     font-size: 1.3em;
     color: var(--button_accent_color);
+    margin-bottom: 0.3em;
 }
 .side_ele_div.cnt{
     display: flex;
@@ -215,6 +216,8 @@
     width: 100%;
     flex:1;
     padding: 0.3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     display: grid;
     gap: 0.3em;
     grid-template-columns: 30% 1fr;
@@ -226,6 +229,7 @@
 
 }
 .control_keys{
+    color: #6b6b6b;
     display: flex;
     /* justify-content: center; */
     gap: 0.2em;
@@ -234,7 +238,8 @@
 .control_keys .control_key{
     --control_size:3.5em;
     font-size: 0.8em;
-    line-height: 2.65;
+    line-height: 3.4;
+    padding: initial;
     /* flex: 1; */
     height: var(--control_size);
     
@@ -331,6 +336,7 @@ body.fullscreen .game_parent > *  {
 body.fullscreen .game_parent .side_div{
     padding-left: var(--margin_sides);
     padding-right: var(--margin_sides);
+    
 }
 body.fullscreen .logo_div{
     /* display: none; */
@@ -356,10 +362,6 @@ body.fullscreen::-webkit-scrollbar{
     display: none;
     width: 0px;
 }
-::backdrop {
-    background-color: rgba(255,255,255,0);
-}
-
 /* .fullscreen.game_parent */
 
 
@@ -455,34 +457,62 @@ html[data-scroll='0']  body.fullscreen .scroll_button{
 
 
 /* full screen mode end */
+@media screen and (min-width:1250px) {
 
-@media screen and (max-width:1150px) {
+    body.fullscreen .game_parent .side_div{
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+    body.fullscreen .side_ele_div.big{
+        flex: 100%;
+        height: auto;
+        order: 3;
+    }
+}
+
+@media screen and (max-width:1250px) {
     .game_parent{
         flex-direction: column;
     }
     .game_parent > *{
         width: 100%;
     }
+   
 }
-@media screen and (max-width:1150px) and (min-width:750px) {
+@media screen and (max-width:1250px) and (min-width:750px) {
     .side_div{
         /* height: 200px; */
         flex-direction: row;
+        flex-wrap: wrap;
     }
     .side_ele_div.big{
-        flex: 70%;
+        flex: 100%;
         height: auto;
+        grid-row: 1/3;
+        order: 3;
     }
-    .side_ele_div.small{
-        flex: 30%;
-        height:auto;
+    #game_p{
+        /* flex-direction: column; */
+        margin: 10px;
     }
 }
 @media screen and (max-width:750px) {
     .side_div{
         flex-direction: column;
     }
+    .side_ele_div.big{
+        order: 0;
+    }
     .side_div > *{
         width: 100%;
+    }
+    .side_ele_div.full_screen{
+        order: 0;
+    }
+
+    .game_parent{
+        flex-direction: column;
+        margin: 10px;
     }
 }

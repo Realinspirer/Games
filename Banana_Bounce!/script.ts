@@ -9,6 +9,8 @@ let game_url_new_tab = "https://html5.gamedistribution.com/427353df0776473895891
 function run_main_frame(){
     document.getElementById("play_game_parent")!.classList.add("hidden");
     (<HTMLIFrameElement>document.getElementById("game_frame")).src = game_url;
+
+    check_size_and_full_screen();
 }
 
 function open_in_new_tab(){

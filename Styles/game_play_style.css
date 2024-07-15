@@ -1,3 +1,6 @@
+body{
+    --subtitle_color:#6b6b6b;
+}
 .game_parent, .game_parent *{
     margin: initial;
 }
@@ -229,7 +232,7 @@
 
 }
 .control_keys{
-    color: #6b6b6b;
+    color: var(--subtitle_color);
     display: flex;
     /* justify-content: center; */
     gap: 0.2em;
@@ -454,6 +457,90 @@ html[data-scroll='0']  body.fullscreen .scroll_button{
 }
 
 /* scroll down thing end  */
+
+/* features thing */
+.features_div *, .features_div{
+    margin: initial;
+    padding: initial;
+}
+.features_div{
+    font-size: clamp(0.75em, 2vw ,1em);
+    /* font-size: 0.75em; */
+
+
+    background-color: white;
+    filter: drop-shadow(0 0 var(--base_blur_amount) transparent);
+    height: 22em;
+    border-radius: var(--big_border_radius);
+    border: solid #a8a8a8 1px;
+    margin: var(--margin_sides);
+    overflow: hidden;
+    transition: filter var(--base_anim_speed);
+}
+.features_div:hover{
+    filter: drop-shadow(0 0 var(--base_blur_amount) #a6a6a6);
+}
+.features_div img{
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    float: left;
+    margin: 0;
+}
+.features_div .title_div{
+    /* background-color: red; */
+    height: 100%;
+    display: flex;
+    padding: 1.5em;
+    color: var(--button_accent_color);
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.4em;
+}
+.features_div .title{
+    font-size: 2.5em;
+}
+.features_div .subtitle{
+    color:var(--subtitle_color);
+    font-size: 1.08em;
+}
+.features_div.right img{
+    float: right;
+}
+.features_div.right{
+    text-align: right;
+}
+
+@media screen and (max-width:600px) {
+    .features_div{
+        height: clamp(18rem, 96vw,26rem);
+        /* height: 18rem; */
+        font-size: clamp(0.45em, 2.4vw ,0.7em);
+        /* font-size: 0.45em; */
+
+    }
+    .features_div .subtitle{
+        font-size: 1.2em;
+    }
+    .features_div img{
+        float: none;
+        height: 70%;
+        width: 100%;
+    }
+    .features_div .title_div{
+        flex-direction: column;
+        justify-content: center;
+        /* padding: 1; */
+        /* background-color: red; */
+        text-align: center;
+        margin-top: -0.5em;
+        
+        width: 100%;
+        height: 30%;
+    }
+}
+
+/* features thing end */
 
 
 /* full screen mode end */

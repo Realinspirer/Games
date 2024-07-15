@@ -1,4 +1,4 @@
-.featured_game, .featured_game *{
+.featured_game, .featured_game *, .featured_parent{
     padding: initial;
     margin: initial;
 
@@ -7,11 +7,14 @@
 .featured_game{
     position: relative;
     overflow: hidden;
+    
+
 }
 .game_feat{
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    
 }
 .game_grad{
     position: absolute;
@@ -26,13 +29,43 @@
     transform: scale(1);
 }
 .featured_game{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* height: 27rem; */
-    height: clamp(15rem, 80vw, 27rem);
-    font-size: clamp(0.5rem, 2.667vw, 1rem);
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    height: 28em;
+    /* height: clamp(15rem, 80vw, 27rem); */
+    /* margin:  var(--margin_sides) 0 var(--margin_sides) 0; */
+    margin: var(--margin_sides) 0 var(--margin_sides);
+
+    align-items: center;
+    /* overflow-x: auto; */
+    overflow-x: hidden;
+}
+.featured_game > .game_feat:first-child{
+    margin-left: 1em;
+
+}
+.featured_game > .game_feat:last-child{
+    margin-right: 1em;
+
+}
+.game_feat{
+    flex: 0 0 60%;
+    height: 100%;
+    display: inline-block;
+    border-radius: var(--big_border_radius);
+    transition: var(--base_anim_speed);
 }
 
+.game_feat:not(.game_active){
+    height: 92%;
+    opacity: 0.7;
+    transition: var(--base_anim_speed);
+}
+.game_feat:hover:not(.game_active){
+    opacity: 0.9;
+    
+}
 .game_feat img{
     width: 100%;
     height: 100%;
@@ -60,25 +93,147 @@
     display: block;
     margin-top: 0.1em;
 }
+.featured_parent{
+    position: relative;
 
+    font-size: clamp(0.6rem, 3.2vw, 1rem);
+    /* font-size: 0.5rem; */
+    margin: 0;
+}
+.featured_parent .scroll_button{
+    background-color: white;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    
+    position: absolute;
+    /* bottom: 0; */
+    /* left: 0; */
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    margin: auto;
 
-.featured_game::after{
+    z-index: 3;
+    overflow: hidden;
+
+    filter: drop-shadow(0 0 var(--base_blur_amount) #616161);
+    transition: var(--base_anim_speed);
+    cursor: pointer;
+    opacity: 0.75;
+}
+.featured_parent .scroll_button:hover{
+    filter: drop-shadow(0 0 var(--big_blur_amount) #424242);
+}
+.featured_parent .scroll_button.left{
+    left: 0.5em;
+    transform: rotate(90deg);
+}
+.featured_parent .scroll_button.right{
+    right: 0.5em;
+    transform: rotate(-90deg);
+}
+.featured_parent .scroll_button img{
+    width: 100%;
+    /* background-color: red; */
+    height: 100%;
+    padding: 0.5em;
+    padding-top: 0.7em;
+    align-items: center;
+    object-fit: scale-down;
+}
+.featured_parent .scroll_button.left:hover.rotate{
+    transform:rotate(-90deg);
+}
+.featured_parent .scroll_button.right:hover.rotate{
+    transform:rotate(90deg);
+}
+@media (pointer:coarse) {
+    .featured_parent .scroll_button.left.rotate{
+        transform:rotate(-90deg);
+    }
+    .featured_parent .scroll_button.right.rotate{
+        transform:rotate(90deg);
+    }
+}
+.auto_controls *, .auto_controls{
+    margin: initial;
+    padding: initial;
+    
+}
+.auto_controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--margin_sides);
+
+    font-size: clamp(0.55em,2.933vw,1em);
+    gap: 0.7em;
+
+    --controls_color: #00000035;
+}
+.auto_controls #sc_button{
+    border:none;
+    color: var(--controls_color);
+    width: 1.1em;
+    height: 1.1em;
+    /* background-color: red; */
+    opacity: 0.5;
+    cursor: pointer;
+
+    transition: var(--base_anim_speed);
+}
+.auto_controls #sc_button img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.auto_controls #sc_button:hover{
+    opacity: 1;
+}
+
+.timer{
+    position: relative;
+    height: 2em;
+    width: 2em;
+    /* background-color: red; */
+    border-radius: 50%;
+    background-image: conic-gradient(transparent var(--timer), 0, var(--controls_color));
+}
+.timer::before{
+    content: "";
+    position: absolute;
+    --uni_out:-0.15em;
+    left: var(--uni_out);
+    top: var(--uni_out);
+    right: var(--uni_out);
+    bottom: var(--uni_out);
+    border-radius: inherit;
+    border: 1px solid var(--controls_color);
+}
+.game_feat{
+    overflow: hidden;
+    position: relative;
+}
+
+.game_feat.game_active::after{
     pointer-events: none;
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 300%;
+    left: 0;
+
+    right: 0;
+    width: 400%;
+    
     content: "";
     background-color: transparent;
-    background-image: linear-gradient(30deg, transparent, transparent, transparent, #ffffff6e, transparent, transparent, transparent);
+    background-image: linear-gradient(30deg, transparent 40%, #ffffff6f 50%, transparent 60%);
+
+    transition: var(--base_anim_speed);
     animation: shine_anim 4s infinite;
-
-}
-
-.all_games_desc{
-    margin: calc(var(--margin_sides) * 1.7) var(--margin_sides) calc(var(--margin_sides) * 1.1) var(--margin_sides);
-    color: var(--button_accent_color);
-    font-size: clamp(0.8em, 4vw, 1.5em);
 }
 
 @keyframes shine_anim{
@@ -90,8 +245,16 @@
     }
 }
 
-/* @media screen and (max-width:400px) {
-    
+@media screen and (max-width:950px) {
+    .game_feat{
+        flex: 0 0 70%;
+    }
+}
+/* .featured_parent > *{
+    overflow: visible;
+} */
+/* .featured_parent{
+    overflow: hidden;
 } */
 
 /* @media screen and (max-width:750px)  {

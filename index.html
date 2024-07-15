@@ -59,22 +59,39 @@
     <!-- header end -->
 
     <!-- featured section -->
+
+    <div class="featured_parent">
+        <a class="scroll_button left" id="left_scroller" onclick="scroll_left()"><img alt="symbol" src="/Images/Symbols/down.png"></a>
+        <a class="scroll_button right" id="right_scroller" onclick="scroll_right()"><img alt="symbol" src="/Images/Symbols/down.png"></a>
+        <div class="featured_game" id="scroll_hor">
     
-    <div class="featured_game">
-        <div class="game_feat">
-            <img src="/Images/back1.png" alt="game_cover">
-            <div class="game_grad"></div>
-            <h1 class="title">New release
-                <span>Banana Bounce!</span>
-            </h1>
-        </div>
-        <div class="game_feat">
-            <img src="/Images/Discover_section/vector_img.png" alt="game_cover">
-            <div class="game_grad"></div>
-            <h1 class="title">Featured
-                <span>Heck's Kitchen!</span>
-            </h1>
-        </div>
+            <div class="game_feat game_active">
+                <img src="/Images/back1.png" alt="game_cover">
+                <div class="game_grad"></div>
+                <h1 class="title">New release
+                    <span>Banana Bounce!</span>
+                </h1>
+            </div>
+            <div class="game_feat">
+                <img src="/Images/Discover_section/vector_img.png" alt="game_cover">
+                <div class="game_grad"></div>
+                <h1 class="title">Featured
+                    <span>Heck's Kitchen!</span>
+                </h1>
+            </div>
+            <div class="game_feat">
+                <img src="/Images/Discover_section/vector_img.png" alt="game_cover">
+                <div class="game_grad"></div>
+                <h1 class="title">Featured
+                    <span>Heck's Kitchen!</span>
+                </h1>
+            </div>
+    </div>
+    </div>
+
+    <div class="auto_controls">
+        <a id="sc_button"><img src="/Images/Symbols/pause.png" alt="pause/play"></a>
+        <div class="timer" id="timer_circle"></div>
     </div>
 
     <!-- featured section end -->
@@ -92,7 +109,7 @@
         </div> -->
         
         <div class="feat_sec first_feat">
-            <img src="/Images/back1.png" alt="cover">
+            <img src="Banana_Bounce!/Images/Shop_bb.png" alt="cover">
             <h3 class="title">Discover several powerups!
                 <span>Banana Bounce!</span>
             </h3>
@@ -109,6 +126,7 @@
                 <p>Play now!</p>
             </div>
         </div>
+        
     </div>
 
 
@@ -144,9 +162,9 @@
             <div class="footer_links_section">
                 <p class="footer_links_title">Socials</p>
                 <ul class="footer_links_list">
-                    <li><a href="https://www.youtube.com/@Realinspirer?sub_confirmation=1">YouTube</a></li>
-                    <li><a href="https://realinspirer.itch.io/">Itch.io</a></li>
-                    <li><a href="https://github.com/Realinspirer/">Github</a></li>
+                    <li><a href="https://www.youtube.com/@Realinspirer?sub_confirmation=1" rel="noopener" target="_blank">YouTube</a></li>
+                    <li><a href="https://realinspirer.itch.io/" rel="noopener" target="_blank">Itch.io</a></li>
+                    <li><a href="https://github.com/Realinspirer/" rel="noopener" target="_blank">Github</a></li>
                 </ul>
             </div>
             <div class="footer_links_section">
@@ -172,7 +190,7 @@
             <div class="footer_links_section">
                 <p class="footer_links_title">Hire me</p>
                 <ul class="footer_links_list">
-                    <li>Linkedin</li>
+                    <li><a href="https://www.linkedin.com/in/realinspirer/" rel="noopener" target="_blank">Linkedin</a></li>
                     <li>Freelancer</li>
                     <li><a href="mailto:realinspirer@outlook.com">Email</a></li>
                 </ul>
@@ -188,6 +206,6 @@
         </p>
     </div>
     <!-- footer section end -->
-     
+     <script src="Scripts/Scroll_vertical.js"></script>
 </body>
 </html>

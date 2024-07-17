@@ -8,7 +8,7 @@ body{
     display: flex;
     gap: var(--margin_sides);
     margin: var(--margin_sides);
-    font-size: clamp(0.7em,3.733vw,1em);
+    font-size: clamp(0.82em,4.373vw,1em);
 }
 
 
@@ -17,7 +17,7 @@ body{
     width: 75%;
     
 
-    height: clamp(300px, 100vw, 600px);
+    height: clamp(380px, 126.667vw, 600px);
     /* width: calc(100% - var(--margin_sides) * 2 ); */
     
 
@@ -267,18 +267,19 @@ body{
     margin: var(--margin_sides);
     color: var(--button_accent_color);
 
-    margin-top: calc(1.6 * var(--margin_sides));
+    margin-top: calc(2 * var(--margin_sides));
+    margin-bottom: calc(var(--margin_sides) * 2);
 
-    font-size: clamp(0.7em,3.733vw, 1em);
+    font-size: clamp(0.8em, 4.267vw, 1em);
 }
 .title_desc_div .title{
-    font-size: 1.8em;
+    font-size: 1.85em;
     padding: 0;
     margin: 0;
 }
 .title_desc_div .desc{
     margin-top: 0.7em;
-    font-size: 0.95em;
+    font-size: 0.97em;
     line-height: 1.3em;
     padding: 1.1em;
     background-color: #d5d5d5;
@@ -361,10 +362,11 @@ html:not([data-scroll='0'])  body.fullscreen .logo_div{
         filter: drop-shadow(0 0 10px #494949);
         /* background-color: red; */
 }
-body.fullscreen::-webkit-scrollbar{
+html[data-scroll='0'] body.fullscreen::-webkit-scrollbar{
     display: none;
     width: 0px;
 }
+
 /* .fullscreen.game_parent */
 
 
@@ -513,14 +515,16 @@ html[data-scroll='0']  body.fullscreen .scroll_button{
 
 @media screen and (max-width:600px) {
     .features_div{
-        height: clamp(18rem, 96vw,26rem);
+        height: clamp(24.5rem, 130.667vw,35rem);
+        /* height: 24.5rem; */
         /* height: 18rem; */
-        font-size: clamp(0.45em, 2.4vw ,0.7em);
+        font-size: clamp(0.47em, 2.507vw ,0.7em);
+        /* font-size: 0.47em; */
         /* font-size: 0.45em; */
 
     }
     .features_div .subtitle{
-        font-size: 1.2em;
+        font-size: 1.65em;
     }
     .features_div img{
         float: none;

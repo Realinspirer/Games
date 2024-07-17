@@ -22,12 +22,12 @@ function Toggle_full_screen_mode(do_toggle = true) {
         toggle_full_screen();
     }
     if (is_full_screen) {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-        });
-        // document.body.scrollTop = document.documentElement.scrollTop = 0;
+        // window.scrollTo({
+        //     top: 0,
+        //     left: 0,
+        //     behavior: "smooth",
+        //   });
+        document.documentElement.scrollTop = 0;
         text_element.innerHTML = "Exit full screen mode";
     }
     else {

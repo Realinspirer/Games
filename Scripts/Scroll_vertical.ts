@@ -59,6 +59,8 @@ function Scroll_common(current_child:HTMLElement, previous_child:HTMLElement){
 let left_btn = document.getElementById("left_scroller");
 let right_btn = document.getElementById("right_scroller");
 
+let scroller_child_len = scroller.children.length;
+
 check_both_scroller();
 function check_both_scroller(){
     if(index == 0){
@@ -69,7 +71,7 @@ function check_both_scroller(){
     }
 
     if(scroller != null){
-        if(index == scroller.children.length - 1){
+        if(index == scroller_child_len - 1){
             right_btn!.classList.add('rotate');
         }
         else{
@@ -136,3 +138,49 @@ function scroll_button_click_handler(){
         sc_button_img.src = "/Images/Symbols/pause.png";
     }
 }
+
+
+scroller.addEventListener('touchstart', handleTouchStart, false);        
+scroller.addEventListener('touchmove', handleTouchMove, false);
+
+let xDown:any = null;
+let yDown:any = null;
+
+function getTouches(evt:any) {
+  return evt.touches ||             // browser API
+         evt.originalEvent.touches; // jQuery
+}                                                     
+                                                                         
+function handleTouchStart(evt:any) {
+    const firstTouch = getTouches(evt)[0];                                      
+    xDown = firstTouch.clientX;                                      
+    yDown = firstTouch.clientY;                                      
+};                                                
+                                                                         
+function handleTouchMove(evt:any) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+                                                                         
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
+        
+        if ( xDiff > 0 ) {
+            if(index < scroller_child_len - 1){
+                scroll_right();
+            }
+        } else {
+            if(index > 0){
+                scroll_left();
+            }
+        }                       
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};

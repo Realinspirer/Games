@@ -1,6 +1,8 @@
-let index = 0;
+(function(){ let index = 0;
 
 let scroller = document.getElementById('scroll_hor')!;
+
+scroller.scrollTo(0, 0);
 function scroll_left(){
     // scroller!.scrollBy({ left: -500, behavior: "smooth"})
 
@@ -120,8 +122,12 @@ function timer_scroll(){
 
 left_btn!.addEventListener!('mouseover', () => hover_paused=true);
 left_btn!.addEventListener!('mouseout', () => hover_paused = false);
+left_btn!.addEventListener('click', scroll_left);
+
 right_btn!.addEventListener!('mouseover', () => hover_paused=true);
 right_btn!.addEventListener!('mouseout', () => hover_paused = false);
+right_btn!.addEventListener('click', scroll_right);
+
 
 
 let sc_button = document.getElementById("sc_button")!;
@@ -184,3 +190,5 @@ function handleTouchMove(evt:any) {
     xDown = null;
     yDown = null;                                             
 };
+
+})();

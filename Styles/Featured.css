@@ -84,9 +84,11 @@
     margin: 0 0 0.5em 0.5em;
     font-size: 2.5em;
     transition: var(--base_anim_speed);
+    transform-origin: 0 100%;
 }
 .game_feat:hover .title{
-    font-size: 2.7em;
+    /* font-size: 2.7em; */
+    transform: scale(1.1);
 }
 .game_feat .title span{
     font-size: 0.55em;
@@ -141,7 +143,7 @@
     height: 100%;
     padding: 0.5em;
     padding-top: 0.7em;
-    align-items: center;
+    /* align-items: center; */
     object-fit: scale-down;
 }
 .featured_parent .scroll_button.left:hover.rotate{

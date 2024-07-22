@@ -1,0 +1,17 @@
+.featured_game{
+    height: 28em;
+}
+.game_feat{
+    flex: 0 0 60%;
+}
+
+.game_feat.game_active::after{
+    display: none;
+    animation: none;
+}
+
+@media screen and (max-width:950px) {
+    .game_feat{
+        flex: 0 0 70%;
+    }
+}

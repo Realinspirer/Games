@@ -173,12 +173,13 @@ body{
     height: 0;
     margin: 0;
     background-repeat: no-repeat;
-    transition: var(--base_anim_speed);
+    transition: width var(--base_anim_speed), margin var(--base_anim_speed),
+                height var(--base_anim_speed);
 }
 .side_ele_div.normal_button.full_screen p::after{
     background-image: url(/Images/Symbols/Full_screen.png);
 }
-.side_ele_div.normal_button:hover p:after{
+.side_ele_div.normal_button:hover p::after{
     width: 1.1em;
     height: 1.1em;
     margin: 0 0 -0.25em 0.3em;
@@ -286,7 +287,7 @@ body{
     border-radius: var(--big_border_radius);
 
     border: solid 1px transparent;
-    transition: var(--base_anim_speed);
+    transition: border var(--base_anim_speed);
 
 }
 .title_desc_div ul{
@@ -344,7 +345,8 @@ body.fullscreen .game_parent .side_div{
 }
 body.fullscreen .logo_div{
     /* display: none; */
-    transition: var(--base_anim_speed);
+    transition: transform var(--base_anim_speed), background-color var(--base_anim_speed),
+                filter var(--base_anim_speed);
     position: fixed;
     z-index: 99;
     background-color: inherit;
@@ -353,6 +355,7 @@ body.fullscreen .logo_div{
     right: 0;
     /* height: 6em; */
     transform: translateY(-100%);
+    -webkit-backdrop-filter: blur(var(--base_blur_amount));
     backdrop-filter: blur(var(--base_blur_amount));
 
 }
@@ -411,7 +414,7 @@ html[data-scroll='0']  body.fullscreen .scroll_down_div{
     position: fixed;
     bottom: 0.9em;
     right: 1.1em;
-    transition: var(--base_anim_speed);
+    transition: filter var(--base_anim_speed);
     cursor: pointer;
     display: none;
     animation: scale_in var(--base_anim_speed);

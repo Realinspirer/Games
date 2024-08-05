@@ -6,7 +6,7 @@
 }
 
 .game_feat.game_active::after{
-    display: none;
+    content: none;
     animation: none;
 }
 

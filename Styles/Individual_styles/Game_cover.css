@@ -1,0 +1,138 @@
+:where(.game_cover *, .game_cover){
+    padding: initial;
+    margin: initial;
+}
+body{
+    --game_color_title:#555555ff;
+    --game_color_subtitle:#626262ff;
+
+    --accent_gradient_fainted:linear-gradient(90deg, #b0dee7ff, #c2e5f0ff);
+    --accent_gradient_vibrant:linear-gradient(90deg, #25e2ffff, #22c8ffff);
+    --img_filter:invert(100%) sepia(100%) saturate(0%) 
+    hue-rotate(267deg) brightness(112%) contrast(101%);
+}
+
+.game_cover{
+    height: 1em;
+    min-height: 35em;
+    
+    background-color: white;
+
+    position: relative;
+
+
+    font-size: 1rem;
+    font-size: 0.85rem;
+    font-size: clamp(0.85rem, 0.727rem + 0.304vw, 1rem);
+}
+.cover_img, .cover_grad{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 70%;
+}
+.cover_img{
+    object-fit: cover;
+    overflow: hidden;
+}
+.cover_grad{
+    background-image: linear-gradient(90deg, white, transparent 70%);
+}
+
+.game_cover .title_div{
+    position: relative;
+    z-index: 1;
+    
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    gap: 0.2em;
+
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    padding: 0 3em;
+}
+.game_cover .title{
+    font-size: 3em;
+    color: var(--game_color_title);
+}
+.game_cover .subtitle{
+    color: var(--game_color_subtitle);
+    font-size: 1.3em;
+    margin: 0 3em 0 0;
+    font-family: LT_light;
+}
+
+.game_cover .normal_button{
+    margin-top: 1em;
+    background-image: var(--accent_gradient_fainted);
+    border: none;
+    font-size: 1.25em;
+    min-width: 8em;
+}
+.normal_button.with_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+    border-radius: 0.5em;
+}
+.normal_button *{
+    margin: initial;
+    padding: initial;
+}
+.normal_button.with_img img{
+    --size: 1.1em;
+    height: var(--size);
+    width: var(--size);
+    margin-bottom: 0.15em;
+
+    transition: filter var(--base_anim_speed);
+}
+.game_cover .normal_button::before{
+    background-image: var(--accent_gradient_vibrant);
+}
+.normal_button.with_img:hover img{
+    filter: var(--img_filter);
+}
+.game_cover .normal_button:hover{
+    color: white;
+}
+
+
+@media screen and (max-width:650px) {
+    .game_cover{
+        font-size: 0.9rem;
+        font-size: 0.75rem;
+        font-size: clamp(0.75rem, 0.621rem + 0.686vw, 0.9rem);
+
+        min-height: initial;
+        height: 50em;
+    }
+
+    .cover_img, .cover_grad{
+        right: 0;
+        height: 43em;
+        height: 33em;
+        height: clamp(37em, 31.857em + 27.429vw, 43em);
+
+        width: 100%;
+    }
+    .cover_grad{
+    background-image: linear-gradient(transparent 30%, white);
+    }
+
+    .game_cover .title_div{
+        width: 100%;
+        justify-content: end;
+        padding: 2em 1.3em;
+    }
+    .game_cover .subtitle{
+        margin-right: 1em;
+    }
+    .game_cover .normal_button{
+        font-size: 1.3em;
+    }
+}

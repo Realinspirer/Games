@@ -1,0 +1,32 @@
+:where(.game_desc *, .game_desc){
+    margin: initial;
+    padding: initial;
+}
+body{
+    --game_border_radius: 1.3em;
+    --desc_color:#565656ff;
+}
+
+.game_desc{
+    margin: var(--margin_sides);
+    padding: 1.5em;
+    background-color: white;
+    border: #c6c6c6 1px solid;
+    border-radius: var(--game_border_radius);
+
+
+    margin-top: 1.5em;
+    font-size: 1rem;
+    font-size: 0.83rem;
+    font-size: clamp(0.83rem, 0.785rem + 0.239vw, 1rem);
+}
+.game_desc .title{
+    font-size: 1.85em;
+    color: var(--desc_color);
+}
+.game_desc .desc{
+    font-size: 1.15em;
+    font-family: LT_light;
+    color: var(--desc_color);
+    margin: 0.5em 0 0 0.3em ;
+}

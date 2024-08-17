@@ -1,0 +1,116 @@
+:where(.play_section, .play_section *){
+    padding: initial;
+    margin: initial;
+}
+body{
+    --play_section_title_color:#3f3f3fff;
+    --separator_color:#bcbcbcff;
+
+    --play_drop_color:#22c8ffff;
+    --publish_drop_color:#ff7135ff;
+}
+
+.play_section{
+    margin-top: 1em;
+    text-align: center;
+
+    font-size: 1rem;
+    font-size: 0.77rem;
+    font-size: clamp(0.77rem, 0.52rem + 0.533vw, 1rem);
+}
+.play_section .grad{
+    height: 8em;
+    background-image: linear-gradient(transparent, white 80%);
+}
+
+.play_info{
+    padding: 1em;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: LT_light;
+    font-size: 1.2em;
+    position: relative;
+    background-color: white;
+}
+.play_info::after{
+    position: absolute;
+    content: "";
+    background-color: var(--separator_color);
+    border-radius: 50%;
+    width: 2.5px;
+    height: 80%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.play_now_div{
+    min-height: 20em;
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--play_section_title_color);
+    padding: 3em;
+}
+
+.play_now_div .normal_button{
+    border: none;
+    font-family: LT_regular;
+    min-width: 8em;
+    color: white;
+    font-size: 1.05em;
+
+    transition: filter var(--base_anim_speed);
+}
+.play_now_div .normal_button img{
+    filter: var(--img_filter);
+}
+.play_now_div .normal_button::before{
+    content: "";
+    display: none;
+}
+.play_info .normal_button:hover{
+    filter: drop-shadow(var(--drop_color) 0 0 10px);
+}
+
+.play_now_div .normal_button.play{
+    background-image: var(--accent_gradient_vibrant);
+}
+
+
+.play_info .normal_button.publish{
+    background-image: linear-gradient(90deg, #ff6b6bff, #ff7900ff);
+    min-width: 13em;
+}
+.play_now_div .normal_button.play{
+    --drop_color:var(--play_drop_color);
+}
+.play_now_div .normal_button.publish{
+    --drop_color:var(--publish_drop_color);
+}
+
+@media screen and (max-width:750px) {
+    .play_section{
+        font-size: 0.85rem;
+        font-size: 0.66rem;
+        font-size: clamp(0.66rem, 0.533rem + 0.676vw, 0.85rem);
+    }
+    .play_info{
+        grid-template-columns: auto;
+    }
+    .play_info::after{
+        height: 2px;
+        width: 80%;
+    }
+    .play_now_div{
+        min-height: 12em;
+    }
+    .play_section .grad{
+        height: 5em;
+    }
+}

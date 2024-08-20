@@ -4,6 +4,7 @@
         "subtitle":"Games • Obstacle",
         "description":"Bounce to the sky!",
         "image_url":"/Games/Banana_Bounce!/Images/Banana_bounce.png",
+        "image_cover":"/Games/Banana_Bounce!/Images/Banana_bounce_landscape.png",
         "button_text":"Play now",
         "click_url":"/Games/Banana_Bounce!/"
     },

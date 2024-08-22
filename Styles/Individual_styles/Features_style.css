@@ -29,13 +29,6 @@ body{
 
 
 }
-.Features_scroller::-webkit-scrollbar {
-    display: none;
-}
-.Features_scroller {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
 
 .feature_item{
     padding: 1em;

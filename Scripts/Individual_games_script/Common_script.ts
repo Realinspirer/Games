@@ -10,5 +10,3 @@
     btn_right.addEventListener("click", () => sc_main.scrollBy(scroll_amount, 0));
     btn_left.addEventListener("click", () => sc_main.scrollBy(-scroll_amount, 0));
 })();
-
-get_json_normal_random("../Scripts/Games_gen.json", "more_games_sec", 3, 0);

@@ -1,1 +1,1 @@
-get_json_normal_random("/JSON_data/Games_games_list/Games_gen.json", "more_games_sec", 3, 0);
+get_json_normal_random("/JSON_data/Games_games_list/Games_gen.json", "more_games_sec", 3, "Banana Bounce!");

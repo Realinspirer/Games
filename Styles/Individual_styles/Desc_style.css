@@ -5,6 +5,7 @@
 body{
     --game_border_radius: 1.3em;
     --desc_color:#565656ff;
+    --bullet_style:"⭕";
 }
 
 .game_desc{
@@ -28,5 +29,22 @@ body{
     font-size: 1.15em;
     font-family: LT_light;
     color: var(--desc_color);
-    margin: 0.5em 0 0 0.3em ;
+    margin: 0.7em 0 0 0.3em;
+    line-height: 1.3em;
+}
+.game_desc .feature_points{
+    /* margin-left: 1em; */
+    /* margin-top: 0.7em; */
+    /* margin-bottom: 0.7em; */
+
+    margin: 0.7em 0 0.7em 1.35em;
+
+    gap: 2em;
+    list-style-type: var(--bullet_style);
+}
+.game_desc .feature_points li:not(:last-child){
+    margin-bottom: 0.2em;
+}
+.game_desc .feature_points li{
+    padding-left: 0.5em;
 }

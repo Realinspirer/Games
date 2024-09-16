@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banana Bounce! - Games - Realinspirer</title>
+    <title>Play Heck's Kitchen! - Games - Realinspirer</title>
     <link rel="icon" href="/Images/logo.svg">
 
     <meta name="description" 
-    content="Play the game Banana Bounce! made by Realinspirer. You can also read
+    content="Play the game Heck's Kitchen! made by Realinspirer. You can also read
     and discover about the game, its features and fun aspects of the game.">
-
-
 
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/Styles/Hamburger_nav_icon_style.css">
     <link rel="stylesheet" href="/Styles/Footer.css">
-    <link rel="stylesheet" href="/Styles/Items_section_style.css">
+    <link rel="stylesheet" href="../Styles/Individual_styles/game_play_style.css">
     <link rel="stylesheet" href="/Styles/Middle_section_style.css">
+    <link rel="stylesheet" href="/Styles/Items_section_style.css">
     <link rel="stylesheet" href="/Styles/Items_normal.css">
+
     <link rel="stylesheet" href="/Styles/Commons/Scroll_btn_style.css">
-    <link rel="stylesheet" href="../Styles/Individual_styles/Game_cover.css">
     <link rel="stylesheet" href="../Styles/Individual_styles/Desc_style.css">
     <link rel="stylesheet" href="../Styles/Individual_styles/Features_style.css">
-    <link rel="stylesheet" href="../Styles/Individual_styles/Play_section.css">
     <link rel="stylesheet" href="../Styles/Individual_styles/More_games.css">
     <link rel="stylesheet" href="style.css">
 
@@ -67,125 +65,130 @@
     </div>
     <!-- header end -->
 
-    <div class="game_cover">
-        <img class="cover_img" src="Images/Banana_bounce_landscape_small.png" alt="Cover">
-        <div class="cover_grad"></div>
+    <div class="game_parent">
+        
+        <div class="game_div" id="play_game_parent">
+            <iframe id="game_frame" title="Game frame"></iframe>
+            <div class="Play_now_div">
+                <div class="play_stuffs">
+                    <img src="Images/hk_sq.png" alt="game_logo">
+                    <p class="subtitle">Story • Campaign</p>
+                    <button type="button" id="play_button" class="normal_button">Play game<span></span></button>
+                </div>
+            </div>
+        </div>
 
-        <div class="title_div">
-            <h1 class="title">Bounce, Avoid, and Win!</h1>
-            <p class="subtitle">Find how many levels can you 
-                cross in this casual themed side-scrolling game</p>
-            
-            <a class="normal_button with_img" target="_blank" rel="noopener" href="https://html5.gamedistribution.com/fb1df24707dd4e8aba2fa7056ec48862/">Play now <img src="/Images/Symbols/external.png" alt=""></a>
+        <div class="side_div">
+            <button type="button" id="fullscreen_btn" class="side_ele_div small normal_button full_screen"><p id="full_sc_text">Full screen mode</p></button>
+            <div class="side_ele_div big cnt">
+                <p class="title">Controls</p>
+                <div class="controls">
+                    <!-- big -> control_key big -->
+                    <div class="control_element centered">
+                        <p class="control_name">Control, navigate, and play
+                            using your mouse! 🖱️
+                        </p>
+                        <!-- <div class="control_keys"> -->
+                            <!-- <p class="control_key big">Click and drag</p> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    
+    <div class="scroll_down_div">Scroll down for more! ⬇️</div>
+    <div class="scroll_button"><img alt="down_arrow" src="/Images/Symbols/down.png" id="full_screen_scroll_down_btn"></div>
 
     <div class="game_desc fading_element_card">
-        <h1 class="title">Banana Bounce!</h1>
+        <h1 class="title">Heck's Kitchen!</h1>
         <div class="desc">
-            Banana Bounce! 🍌 is a side-scrolling game where you lead your banana to as far as you can.<br><br>
-            Discover many cool 😎 and amazing 🌟 powerups to boost 🔥 your progress!<br>
-            Discover unique 🤩 characters and earn coins 🪙 while you run!<br>
-            Don't forget to upgrade ⬆️ your powerups to make them even stronger 💪 and better!<br>
-
-            <ul class="feature_points">
-                <li>Numerous powerups to unlock and upgrade</li>
-                <li>A well-made and defined tutorial</li>
-                <li>Collectable coins to earn</li>
-                <li>In game shop</li>
-                <li>Different characters</li>
-                <li>Control over powerup spawn</li>
-            </ul><br>
-
+            'Heck's Kitchen!' - You have been captured by <span class="redacted_text">[REDACTED]</span> and now to survive you have to make the worst dish ever. <br>
+            This game highly focuses on its story.
+            <br>
+            You'll experience many cut-scenes and dialogue throughout this game.
+            <br>
+            <ol class="feature_points">
+                <li>Campaign mode</li>
+                <li>Cut-scenes and dialogues</li>
+                <li>Subtitles for every dialogues</li>
+                <li>Different challenges to complete to finish the game</li>
+            </ol>
+            This game is my dive into story and cut-scenes based games. I aim to keep
+            getting better with time! <br><br>
             Made with ❤️ by Realinspirer
+
         </div>
     </div>
 
-
+    <!-- features section -->
     <div class="feature_parent fading_element_card" id="main_scroller_parent">
-            <button class="sc_button left" type="button" title="Scroll left">
-                <img src="/Images/Symbols/down.png" alt="">
-            </button>
-            <button class="sc_button right" type="button" title="Scroll right">
-                <img src="/Images/Symbols/down.png" alt="">
-            </button>
-        
+        <button class="sc_button left" type="button" title="Scroll left">
+            <img src="/Images/Symbols/down.png" alt="">
+        </button>
+        <button class="sc_button right" type="button" title="Scroll right">
+            <img src="/Images/Symbols/down.png" alt="">
+        </button>
+    
         <div class="Features_scroller no_scroll_bar">
-            <div class="feature_item">
-                <div class="double_img_blur_div">
-                    <img class="above_img" src="Images/bb_power.png" alt=""/>
-                    <img class="blur_img" src="Images/bb_power.png" alt=""/>
-                </div>
-                <div class="desc_div">
-                    <h2 class="title">Discover Limitless Powerups!</h2>
-                    <p class="subtitle">In Banana Bounce, you are presented
-                        with many fun and unique powerups, that are curated using
-                         much creativity and time. You can unlock and upgrade them
-                          in the shop, and they'll be available during your run!
-                    </p>
-                </div>
+        <div class="feature_item">
+            <div class="double_img_blur_div">
+                <img class="above_img" src="Images/sc0.png" alt=""/>
+                <img class="blur_img" src="Images/sc0.png" alt=""/>
             </div>
-            <div class="feature_item">
-                <div class="double_img_blur_div">
-                    <img class="above_img" src="Images/Assets/Shop_bb.png" alt=""/>
-                    <img class="blur_img" src="Images/Assets/Shop_bb.png" alt=""/>
-                </div>
-                <div class="desc_div">
-                    <h2 class="title">Sophisticated Shop System</h2>
-                    <p class="subtitle">In Banana Bounce, you can find many items
-                        in the shop, which primarily include powerups. The shop
-                        gives you full control and allows you to toggle your powerups!
-                    </p>
-                </div>
+            <div class="desc_div">
+                <h2 class="title">Featuring an unsettling story</h2>
+                <p class="subtitle">In this game you will be presented with a 
+                    unusual story that also incorporates the playing element
+                    of the game in a distinct manner.
+                </p>
             </div>
-            <div class="feature_item">
-                <div class="double_img_blur_div">
-                    <img class="above_img" src="Images/Assets/tuto_render.png" alt=""/>
-                    <img class="blur_img" src="Images/Assets/tuto_render.png" alt=""/>
-                </div>
-                <div class="desc_div">
-                    <h2 class="title">Well Designed Tutorial</h2>
-                    <p class="subtitle">Once you start your play in Banana Bounce,
-                        you will be presented with a well defined tutorial level. It's
-                        purpose is to teach you about every basic element of the game.
-                    </p>
-                </div>
+        </div>
+        <div class="feature_item">
+            <div class="double_img_blur_div">
+                <img class="above_img" src="Images/sc2.png" alt=""/>
+                <img class="blur_img" src="Images/sc2.png" alt=""/>
             </div>
-            <div class="feature_item">
-                <div class="double_img_blur_div">
-                    <img class="above_img" src="Images/Assets/bb_ch.png" alt=""/>
-                    <img class="blur_img" src="Images/Assets/bb_ch.png" alt=""/>
-                </div>
-                <div class="desc_div">
-                    <h2 class="title">Unlock Characters</h2>
-                    <p class="subtitle">In Banana Bounce, you will discover many
-                        cool and unique characters in the shop. Work your way up
-                        to unlocking those characters, and discover cool effects!
-                    </p>
-                </div>
+            <div class="desc_div">
+                <h2 class="title">Dialogue and cut-scenes</h2>
+                <p class="subtitle">The game uses actual recorded sound dialogues, and
+                    also features some really interesting cut-scene animations!
+                </p>
+            </div>
+        </div>
+        <div class="feature_item">
+            <div class="double_img_blur_div">
+                <img class="above_img" src="Images/sc3.png" alt=""/>
+                <img class="blur_img" src="Images/sc3.png" alt=""/>
+            </div>
+            <div class="desc_div">
+                <h2 class="title">Well-built subtitles system</h2>
+                <p class="subtitle">Because this game focuses on the story, it has
+                    a well built dialogue system to go with the dialogues and cut-scenes.
+                </p>
+            </div>
+        </div>
+        <div class="feature_item">
+            <div class="double_img_blur_div">
+                <img class="above_img" src="Images/sc1.png" alt=""/>
+                <img class="blur_img" src="Images/sc1.png" alt=""/>
+            </div>
+            <div class="desc_div">
+                <h2 class="title">Level based play</h2>
+                <p class="subtitle">The game has a level based play, where you have 
+                    to create dishes but as the level progresses, it gets harder and 
+                    more involving.
+                </p>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="play_section">
-        <div class="grad"></div>
-        <div class="play_info">
-            <div class="play_now_div">
-                <h2 class="fading_element_card">Play Banana Bounce!</h2>
-                <a class="normal_button with_img play fading_element_card" href="https://html5.gamedistribution.com/fb1df24707dd4e8aba2fa7056ec48862/" target="_blank" rel="noopener">Play now<img src="/Images/Symbols/external.png" alt=""></a>
-            </div>
-            <div class="play_now_div">
-                <h2 class="fading_element_card">Wanna publish the game on your website?</h2>
-                <a class="normal_button with_img publish fading_element_card" href="https://gamedistribution.com/games/banana-bounce!/" target="_blank" rel="noopener">Check out GD page<img src="/Images/Symbols/external.png" alt=""></a>
-            </div>
-        </div>
-    </div>
+    <!-- features section end -->
 
 
     <div class="Middle_section_text small fading_element_card">More Games</div>
     <div class="items_grid items_grid_narrow_0 fading_element_card" id="more_games_sec"></div>
-
-
 
     <!-- footer section -->
     <div class="footer_div">
@@ -257,6 +260,7 @@
 <script src="/Scripts/script.js"></script>
 <script src="/Scripts/Normal_sections_generator/Normal_section_gen.js"></script>
 <script src="../Scripts/Individual_games_script/Common_script.js"></script>
+<script src="../Scripts/Individual_games_script/Play_game_script.js"></script>
 <script src="script.js"></script>
 
 </html>

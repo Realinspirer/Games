@@ -19,6 +19,7 @@
     position: relative;
     transition: transform var(--base_anim_speed);
     cursor: pointer;
+    display: block;
     
     font-size: clamp(0.61rem, 3.253vw, 1rem);
 }

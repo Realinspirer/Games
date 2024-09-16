@@ -1,0 +1,11 @@
+body{
+    --play_background:linear-gradient(90deg, #494949, #703d3d);
+    --bullet_style:"🟣";
+}
+.redacted_text{
+    background-color: #1c1c1c;
+    padding: 0.2em;
+    color: #ef7171;
+    border-radius: 0.2em;
+    filter: drop-shadow(0 0 0.3em #ff000083);
+}

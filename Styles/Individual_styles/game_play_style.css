@@ -1,5 +1,6 @@
 body{
-    --subtitle_color:#6b6b6b;
+    --subtitle_color:#7e7e7e;
+    /* --play_background:linear-gradient(90deg, #59ef90, #64b7ff); */
 }
 .game_parent, .game_parent *{
     margin: initial;
@@ -21,7 +22,7 @@ body{
     /* width: calc(100% - var(--margin_sides) * 2 ); */
     
 
-    background-image: linear-gradient(90deg, #59ef90, #64b7ff);
+    background-image: var(--play_background);
     overflow: hidden;
     background-size: 200%;
     animation: back_anim 10s infinite linear;
@@ -146,7 +147,7 @@ body{
 }
 .side_ele_div{
     /* flex: 50%; */
-    background-color: white;
+    background-color: #efefef;
     border-radius: var(--big_border_radius);
     filter: drop-shadow(0 0 5px #b0b0b0);
     padding: 0.5em;
@@ -158,6 +159,8 @@ body{
     display: flex;
     align-items: center;
     text-align: center;
+    font-family: inherit;
+    font-size: inherit;
 }
 .side_ele_div.normal_button p{
     width: 100%;
@@ -194,7 +197,7 @@ body{
 
 .side_ele_div .title{
     font-size: 1.3em;
-    color: var(--button_accent_color);
+    color: #484848;
     margin-bottom: 0.3em;
 }
 .side_ele_div.cnt{
@@ -214,9 +217,10 @@ body{
     /* justify-content: stretch; */
 }
 .control_element{
-    color: var(--button_accent_color);
-    border: solid 1.1px rgb(181, 181, 181);
-    border-radius: var(--base_border_radius);
+    color: #6e6e6e;
+    border: dashed 1px #b6b6b6;
+    border-radius: 1.2em;
+    background-color: #f5f5f5;
     width: 100%;
     flex:1;
     padding: 0.3em;
@@ -226,6 +230,13 @@ body{
     gap: 0.3em;
     grid-template-columns: 30% 1fr;
     align-items: center;
+}
+.control_element.centered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.8em;
 }
 .control_name{
     font-size: 1.1em;
@@ -240,6 +251,7 @@ body{
     flex-wrap: wrap;
 }
 .control_keys .control_key{
+    background-color: white;
     --control_size:3.5em;
     font-size: 0.8em;
     line-height: 3.4;
@@ -250,7 +262,7 @@ body{
     width: var(--control_size);
     text-align: center;
     /* padding: 1.2em; */
-    border-radius: var(--base_border_radius);
+    border-radius: 0.8em;
     border: 1px solid var(--button_accent_color);
 }
 .control_keys .control_key.big{

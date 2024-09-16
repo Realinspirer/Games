@@ -3,28 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banana Bounce! - Games - Realinspirer</title>
+    <title>Play Banana Bounce! - Games - Realinspirer</title>
     <link rel="icon" href="/Images/logo.svg">
 
     <meta name="description" 
     content="Play the game Banana Bounce! made by Realinspirer. You can also read
     and discover about the game, its features and fun aspects of the game.">
 
-
-
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/Styles/Hamburger_nav_icon_style.css">
     <link rel="stylesheet" href="/Styles/Footer.css">
-    <link rel="stylesheet" href="/Styles/Items_section_style.css">
+    <link rel="stylesheet" href="../../Styles/Individual_styles/game_play_style.css">
     <link rel="stylesheet" href="/Styles/Middle_section_style.css">
+    <link rel="stylesheet" href="/Styles/Items_section_style.css">
     <link rel="stylesheet" href="/Styles/Items_normal.css">
+
     <link rel="stylesheet" href="/Styles/Commons/Scroll_btn_style.css">
-    <link rel="stylesheet" href="../Styles/Individual_styles/Game_cover.css">
-    <link rel="stylesheet" href="../Styles/Individual_styles/Desc_style.css">
-    <link rel="stylesheet" href="../Styles/Individual_styles/Features_style.css">
-    <link rel="stylesheet" href="../Styles/Individual_styles/Play_section.css">
-    <link rel="stylesheet" href="../Styles/Individual_styles/More_games.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../Styles/Individual_styles/Desc_style.css">
+    <link rel="stylesheet" href="../../Styles/Individual_styles/Features_style.css">
+    <link rel="stylesheet" href="../../Styles/Individual_styles/More_games.css">
+    <link rel="stylesheet" href="../style.css">
 
     
 </head>
@@ -67,18 +65,44 @@
     </div>
     <!-- header end -->
 
-    <div class="game_cover">
-        <img class="cover_img" src="Images/Banana_bounce_landscape_small.png" alt="Cover">
-        <div class="cover_grad"></div>
+    <div class="game_parent">
+        
+        <div class="game_div" id="play_game_parent">
+            <iframe id="game_frame" title="Game frame"></iframe>
+            <div class="Play_now_div">
+                <div class="play_stuffs">
+                    <img src="../Images/Banana_bounce.png" alt="game_logo">
+                    <p class="subtitle">Side Scrolling • Obstacles</p>
+                    <button type="button" id="play_button" class="normal_button">Play game<span></span></button>
+                </div>
+            </div>
+        </div>
 
-        <div class="title_div">
-            <h1 class="title">Bounce, Avoid, and Win!</h1>
-            <p class="subtitle">Find how many levels can you 
-                cross in this casual themed side-scrolling game</p>
-            
-            <a class="normal_button with_img" target="_blank" rel="noopener" href="https://html5.gamedistribution.com/fb1df24707dd4e8aba2fa7056ec48862/">Play now <img src="/Images/Symbols/external.png" alt=""></a>
+        <div class="side_div">
+            <button type="button" id="fullscreen_btn" class="side_ele_div small normal_button full_screen"><p id="full_sc_text">Full screen mode</p></button>
+            <div class="side_ele_div big cnt">
+                <p class="title">Controls</p>
+                <div class="controls">
+                    <!-- big -> control_key big -->
+                    <div class="control_element">
+                        <p class="control_name">Move:</p>
+                        <div class="control_keys">
+                            <p class="control_key big">Click and drag</p>
+                        </div>
+                    </div>
+                    <div class="control_element">
+                        <p class="control_name">UI:</p>
+                        <div class="control_keys">
+                            <p class="control_key">🖱️</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    
+    <div class="scroll_down_div">Scroll down for more! ⬇️</div>
+    <div class="scroll_button"><img alt="down_arrow" src="/Images/Symbols/down.png" id="full_screen_scroll_down_btn"></div>
 
     <div class="game_desc fading_element_card">
         <h1 class="title">Banana Bounce!</h1>
@@ -101,91 +125,77 @@
         </div>
     </div>
 
-
+    <!-- features section -->
     <div class="feature_parent fading_element_card" id="main_scroller_parent">
-            <button class="sc_button left" type="button" title="Scroll left">
-                <img src="/Images/Symbols/down.png" alt="">
-            </button>
-            <button class="sc_button right" type="button" title="Scroll right">
-                <img src="/Images/Symbols/down.png" alt="">
-            </button>
-        
+        <button class="sc_button left" type="button" title="Scroll left">
+            <img src="/Images/Symbols/down.png" alt="">
+        </button>
+        <button class="sc_button right" type="button" title="Scroll right">
+            <img src="/Images/Symbols/down.png" alt="">
+        </button>
+    
         <div class="Features_scroller no_scroll_bar">
-            <div class="feature_item">
-                <div class="double_img_blur_div">
-                    <img class="above_img" src="Images/bb_power.png" alt=""/>
-                    <img class="blur_img" src="Images/bb_power.png" alt=""/>
-                </div>
-                <div class="desc_div">
-                    <h2 class="title">Discover Limitless Powerups!</h2>
-                    <p class="subtitle">In Banana Bounce, you are presented
-                        with many fun and unique powerups, that are curated using
-                         much creativity and time. You can unlock and upgrade them
-                          in the shop, and they'll be available during your run!
-                    </p>
-                </div>
+        <div class="feature_item">
+            <div class="double_img_blur_div">
+                <img class="above_img" src="../Images/bb_power.png" alt=""/>
+                <img class="blur_img" src="../Images/bb_power.png" alt=""/>
             </div>
-            <div class="feature_item">
-                <div class="double_img_blur_div">
-                    <img class="above_img" src="Images/Assets/Shop_bb.png" alt=""/>
-                    <img class="blur_img" src="Images/Assets/Shop_bb.png" alt=""/>
-                </div>
-                <div class="desc_div">
-                    <h2 class="title">Sophisticated Shop System</h2>
-                    <p class="subtitle">In Banana Bounce, you can find many items
-                        in the shop, which primarily include powerups. The shop
-                        gives you full control and allows you to toggle your powerups!
-                    </p>
-                </div>
+            <div class="desc_div">
+                <h2 class="title">Discover Limitless Powerups!</h2>
+                <p class="subtitle">In Banana Bounce, you are presented
+                    with many fun and unique powerups, that are curated using
+                     much creativity and time. You can unlock and upgrade them
+                      in the shop, and they'll be available during your run!
+                </p>
             </div>
-            <div class="feature_item">
-                <div class="double_img_blur_div">
-                    <img class="above_img" src="Images/Assets/tuto_render.png" alt=""/>
-                    <img class="blur_img" src="Images/Assets/tuto_render.png" alt=""/>
-                </div>
-                <div class="desc_div">
-                    <h2 class="title">Well Designed Tutorial</h2>
-                    <p class="subtitle">Once you start your play in Banana Bounce,
-                        you will be presented with a well defined tutorial level. It's
-                        purpose is to teach you about every basic element of the game.
-                    </p>
-                </div>
+        </div>
+        <div class="feature_item">
+            <div class="double_img_blur_div">
+                <img class="above_img" src="../Images/Assets/Shop_bb.png" alt=""/>
+                <img class="blur_img" src="../Images/Assets/Shop_bb.png" alt=""/>
             </div>
-            <div class="feature_item">
-                <div class="double_img_blur_div">
-                    <img class="above_img" src="Images/Assets/bb_ch.png" alt=""/>
-                    <img class="blur_img" src="Images/Assets/bb_ch.png" alt=""/>
-                </div>
-                <div class="desc_div">
-                    <h2 class="title">Unlock Characters</h2>
-                    <p class="subtitle">In Banana Bounce, you will discover many
-                        cool and unique characters in the shop. Work your way up
-                        to unlocking those characters, and discover cool effects!
-                    </p>
-                </div>
+            <div class="desc_div">
+                <h2 class="title">Sophisticated Shop System</h2>
+                <p class="subtitle">In Banana Bounce, you can find many items
+                    in the shop, which primarily include powerups. The shop
+                    gives you full control and allows you to toggle your powerups!
+                </p>
+            </div>
+        </div>
+        <div class="feature_item">
+            <div class="double_img_blur_div">
+                <img class="above_img" src="../Images/Assets/tuto_render.png" alt=""/>
+                <img class="blur_img" src="../Images/Assets/tuto_render.png" alt=""/>
+            </div>
+            <div class="desc_div">
+                <h2 class="title">Well Designed Tutorial</h2>
+                <p class="subtitle">Once you start your play in Banana Bounce,
+                    you will be presented with a well defined tutorial level. It's
+                    purpose is to teach you about every basic element of the game.
+                </p>
+            </div>
+        </div>
+        <div class="feature_item">
+            <div class="double_img_blur_div">
+                <img class="above_img" src="../Images/Assets/bb_ch.png" alt=""/>
+                <img class="blur_img" src="../Images/Assets/bb_ch.png" alt=""/>
+            </div>
+            <div class="desc_div">
+                <h2 class="title">Unlock Characters</h2>
+                <p class="subtitle">In Banana Bounce, you will discover many
+                    cool and unique characters in the shop. Work your way up
+                    to unlocking those characters, and discover cool effects!
+                </p>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="play_section">
-        <div class="grad"></div>
-        <div class="play_info">
-            <div class="play_now_div">
-                <h2 class="fading_element_card">Play Banana Bounce!</h2>
-                <a class="normal_button with_img play fading_element_card" href="https://html5.gamedistribution.com/fb1df24707dd4e8aba2fa7056ec48862/" target="_blank" rel="noopener">Play now<img src="/Images/Symbols/external.png" alt=""></a>
-            </div>
-            <div class="play_now_div">
-                <h2 class="fading_element_card">Wanna publish the game on your website?</h2>
-                <a class="normal_button with_img publish fading_element_card" href="https://gamedistribution.com/games/banana-bounce!/" target="_blank" rel="noopener">Check out GD page<img src="/Images/Symbols/external.png" alt=""></a>
-            </div>
-        </div>
-    </div>
+    <!-- features section end -->
 
 
     <div class="Middle_section_text small fading_element_card">More Games</div>
     <div class="items_grid items_grid_narrow_0 fading_element_card" id="more_games_sec"></div>
-
-
 
     <!-- footer section -->
     <div class="footer_div">
@@ -256,7 +266,8 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="/Scripts/script.js"></script>
 <script src="/Scripts/Normal_sections_generator/Normal_section_gen.js"></script>
-<script src="../Scripts/Individual_games_script/Common_script.js"></script>
+<script src="../../Scripts/Individual_games_script/Common_script.js"></script>
+<script src="../../Scripts/Individual_games_script/Play_game_script.js"></script>
 <script src="script.js"></script>
 
 </html>

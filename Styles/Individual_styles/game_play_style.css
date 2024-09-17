@@ -213,7 +213,7 @@ body{
     height: 100%;
     padding: 0 calc(var(--margin_sides) * 0.5) var(--margin_sides) calc(var(--margin_sides) * 0.5);
     gap: calc(var(--margin_sides) * 0.5);
-    
+
     /* justify-content: stretch; */
 }
 .control_element{

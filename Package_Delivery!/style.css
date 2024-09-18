@@ -1,0 +1,6 @@
+body{
+    --play_background:linear-gradient(90deg, #efa659, #ff7b64);
+    --play_drop_color:#ffa42e;
+    --accent_gradient_fainted:linear-gradient(90deg, #e7c5b0, #f0cdc2);
+    --accent_gradient_vibrant:linear-gradient(90deg, #ffa172, #f6900b);
+}

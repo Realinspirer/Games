@@ -90,13 +90,15 @@ body{
     width: var(--size);
     margin-bottom: 0.15em;
 
-    transition: filter var(--base_anim_speed);
+    transition: filter var(--base_anim_speed),
+                margin-left var(--base_anim_speed);
 }
 .game_cover .normal_button::before{
     background-image: var(--accent_gradient_vibrant);
 }
 .normal_button.with_img:hover img{
     filter: var(--img_filter);
+    margin-left: 0.5em;
 }
 .game_cover .normal_button:hover{
     color: white;

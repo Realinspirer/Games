@@ -6,6 +6,8 @@ body{
     /* --accent_gradient_vibrant:linear-gradient(90deg, #25e2ffff, #22c8ffff); */
     --img_filter:invert(100%) sepia(100%) saturate(0%) 
     hue-rotate(267deg) brightness(112%) contrast(101%);
+
+    --btn_min_width:8em;
 }
 
 :where(.game_cover *, .game_cover){
@@ -71,7 +73,7 @@ body{
     background-image: var(--accent_gradient_fainted);
     border: none;
     font-size: 1.25em;
-    min-width: 8em;
+    min-width: var(--btn_min_width);
 }
 .normal_button.with_img{
     display: flex;

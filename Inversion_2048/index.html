@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Sling & Shoot! - Games - Realinspirer</title>
+    <title>Inversion 2048 - Games - Realinspirer</title>
     <link rel="icon" href="/Images/logo.svg">
 
     <meta name="description" 
-    content="Play the game Sling & Shoot! made by Realinspirer. You can also read
-    and discover about the game, its features and fun aspects of the game.">
+    content="Play the game Inversion 2048! made by Realinspirer. A 2048 game, but with some twists and turns!">
+
+
 
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/Styles/Hamburger_nav_icon_style.css">
     <link rel="stylesheet" href="/Styles/Footer.css">
-    <link rel="stylesheet" href="../../Styles/Individual_styles/game_play_style.css">
-    <link rel="stylesheet" href="/Styles/Middle_section_style.css">
     <link rel="stylesheet" href="/Styles/Items_section_style.css">
+    <link rel="stylesheet" href="/Styles/Middle_section_style.css">
     <link rel="stylesheet" href="/Styles/Items_normal.css">
-
     <link rel="stylesheet" href="/Styles/Commons/Scroll_btn_style.css">
-    <link rel="stylesheet" href="../../Styles/Individual_styles/Desc_style.css">
-    <link rel="stylesheet" href="../../Styles/Individual_styles/Features_style.css">
-    <link rel="stylesheet" href="../../Styles/Individual_styles/More_games.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Styles/Individual_styles/Game_cover.css">
+    <link rel="stylesheet" href="../Styles/Individual_styles/Desc_style.css">
+    <link rel="stylesheet" href="../Styles/Individual_styles/Features_style.css">
+    <link rel="stylesheet" href="../Styles/Individual_styles/Play_section.css">
+    <link rel="stylesheet" href="../Styles/Individual_styles/More_games.css">
+    <link rel="stylesheet" href="style.css">
 
     
 </head>
@@ -65,122 +66,115 @@
     </div>
     <!-- header end -->
 
-    <div class="game_parent">
-        
-        <div class="game_div" id="play_game_parent">
-            <iframe id="game_frame" title="Game frame"></iframe>
-            <div class="Play_now_div">
-                <div class="play_stuffs">
-                    <img src="../Images/ss_sq.jpg" alt="game_logo">
-                    <p class="subtitle">Casual • Shooting</p>
-                    <button type="button" id="play_button" class="normal_button">Play game<span></span></button>
-                </div>
-            </div>
-        </div>
+    <div class="game_cover">
+        <img class="cover_img" src="Images/logo.jpg" alt="Cover">
+        <div class="cover_grad"></div>
 
-        <div class="side_div">
-            <button type="button" id="fullscreen_btn" class="side_ele_div small normal_button full_screen"><p id="full_sc_text">Full screen mode</p></button>
-            <div class="side_ele_div big cnt">
-                <p class="title">Controls</p>
-                <div class="controls">
-                    <!-- big -> control_key big -->
-                    <div class="control_element centered">
-                        <p class="control_name">Use Touch/Mouse to play and navigate 🖱️</p>
-                    </div>
-                </div>
-            </div>
+        <div class="title_div">
+            <h1 class="title">Inversion 2048</h1>
+            <p class="subtitle">2048 game- you know the rules. But with the rules you don't know added in!
+            </p>
+            
+            <a class="normal_button with_img" target="_blank" rel="noopener" href="https://html5.gamedistribution.com/96d66522797040b785278f101def9f82/">Play now <img src="/Images/Symbols/external.png" alt=""></a>
         </div>
     </div>
-    
-    <div class="scroll_down_div">Scroll down for more! ⬇️</div>
-    <div class="scroll_button"><img alt="down_arrow" src="/Images/Symbols/down.png" id="full_screen_scroll_down_btn"></div>
 
     <div class="game_desc fading_element_card">
-        <h1 class="title">Sling & Shoot!</h1>
+        <h1 class="title">Inversion 2048</h1>
         <div class="desc">
-            A casual games, where you stretch your slingshot, and shoot! Eliminate the targets, but it's not gonna be easy. Many obstacles will be encountered! Can you buy the ULTIMATE Slingshot and AMMO? Collect coins as you play, and you will get closer to it! The ammo is waiting for you to get it!<br><br>
+            A 2048 game, but with a twist. The world inverts itself. Along with the world, all the blocks invert themselves, and get a secondary number.<br><br>
+            Got stuck? Look into the in-game shop, where you can spend your earned points! You can also buy some skins, but lookout for scams in the shop... well, it's in-game points anyway.<br><br>
 
-            [GAME OPTIMIZED FOR RUNNING IN LANDSCAPE MODE]
+            Sit down relax and enjoy INVERSION 2048.<br>
 
             <ul class="feature_points">
                 <li>Casual</li>
-                <li>Has a shop and coin system</li>
-                <li>You can buy and change almost skin of almost any game feature in the shop</li>
-                <li>Playing with the TNT ammo is quite fun</li>
-                <li>Records hit streak and rewards player after every 15 successful hit</li>
+                <li>In-game shop and points system</li>
+                <li>Two game modes - Progressive and Limitless</li>
+                <li>2048 but world inverts itself</li>
+                <li>Block skins</li>
             </ul>
             Made with ❤️ by Realinspirer
         </div>
     </div>
 
-    <!-- features section -->
+
     <div class="feature_parent fading_element_card" id="main_scroller_parent">
-        <button class="sc_button left" type="button" title="Scroll left">
-            <img src="/Images/Symbols/down.png" alt="">
-        </button>
-        <button class="sc_button right" type="button" title="Scroll right">
-            <img src="/Images/Symbols/down.png" alt="">
-        </button>
-    
+            <button class="sc_button left" type="button" title="Scroll left">
+                <img src="/Images/Symbols/down.png" alt="">
+            </button>
+            <button class="sc_button right" type="button" title="Scroll right">
+                <img src="/Images/Symbols/down.png" alt="">
+            </button>
+        
         <div class="Features_scroller no_scroll_bar">
             <div class="feature_item">
                 <div class="double_img_blur_div">
-                    <img class="above_img" src="../Images/sc0.png" alt=""/>
-                    <img class="blur_img" src="../Images/sc0.png" alt=""/>
+                    <img class="above_img" src="Images/sc0.jpg" alt=""/>
+                    <img class="blur_img" src="Images/sc0.jpg" alt=""/>
                 </div>
                 <div class="desc_div">
                     <h2 class="title">Casual & Fun Mechanics</h2>
-                    <p class="subtitle">The game mechanics presents a very fun and pleasant experience for
-                        the player, along with a number of rewards and challenges!
+                    <p class="subtitle">This game utilizes a casual game, and makes it more fun by adding more challenges!
                     </p>
                 </div>
             </div>
             <div class="feature_item">
                 <div class="double_img_blur_div">
-                    <img class="above_img" src="../Images/sc1.png" alt=""/>
-                    <img class="blur_img" src="../Images/sc1.png" alt=""/>
+                    <img class="above_img" src="Images/sc1.jpeg" alt=""/>
+                    <img class="blur_img" src="Images/sc1.jpeg" alt=""/>
                 </div>
                 <div class="desc_div">
                     <h2 class="title">Robust Shop System</h2>
                     <p class="subtitle">The shop system in this game allow you to buy skins and
-                        customize almost all elements of the game!
+                        also upgrade and buy some neat upgrades/power-ups to help with the game!
                     </p>
                 </div>
             </div>
             <div class="feature_item">
                 <div class="double_img_blur_div">
-                    <img class="above_img" src="../Images/sc2.png" alt=""/>
-                    <img class="blur_img" src="../Images/sc2.png" alt=""/>
+                    <img class="above_img" src="Images/sc2.jpeg" alt=""/>
+                    <img class="blur_img" src="Images/sc2.jpeg" alt=""/>
                 </div>
                 <div class="desc_div">
-                    <h2 class="title">Challenges</h2>
-                    <p class="subtitle">This game is full of different challenges and surprises.
-                        It contains many elements that makes the game that much more
-                        fun!
+                    <h2 class="title">Game modes</h2>
+                    <p class="subtitle">This game features two game modes! Whether you want a goal set to you or just wanna let the time decide the goal- this game has got it covered!
                     </p>
                 </div>
             </div>
             <div class="feature_item">
                 <div class="double_img_blur_div">
-                    <img class="above_img" src="../Images/sc3.png" alt=""/>
-                    <img class="blur_img" src="../Images/sc3.png" alt=""/>
+                    <img class="above_img" src="Images/sc4.jpeg" alt=""/>
+                    <img class="blur_img" src="Images/sc4.jpeg" alt=""/>
                 </div>
                 <div class="desc_div">
-                    <h2 class="title">TNT Ammo type</h2>
-                    <p class="subtitle">There is a special ammo type in the shop "TNT", that
-                        just makes the game soo much more fun. So much so, that I had to add 
-                        this specifically in this section.
+                    <h2 class="title">How to play?</h2>
+                    <p class="subtitle">This game contains a how to play section, which you can open while in-game to learn about it's mechanics.
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- features section end -->
+    <div class="play_section">
+        <div class="grad"></div>
+        <div class="play_info">
+            <div class="play_now_div">
+                <h2 class="fading_element_card">Play Inversion 2048</h2>
+                <a class="normal_button with_img play fading_element_card" href="https://html5.gamedistribution.com/96d66522797040b785278f101def9f82/" target="_blank" rel="noopener">Play now<img src="/Images/Symbols/external.png" alt=""></a>
+            </div>
+            <div class="play_now_div">
+                <h2 class="fading_element_card">Wanna publish the game on your website?</h2>
+                <a class="normal_button with_img publish fading_element_card" href="https://gamedistribution.com/games/inversion-2048/" target="_blank" rel="noopener">Check out GD page<img src="/Images/Symbols/external.png" alt=""></a>
+            </div>
+        </div>
+    </div>
 
 
     <div class="Middle_section_text small fading_element_card">More Games</div>
     <div class="items_grid items_grid_narrow_0 fading_element_card" id="more_games_sec"></div>
+
+
 
     <!-- footer section -->
     <div class="footer_div">
@@ -252,8 +246,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="/Scripts/script.js"></script>
 <script src="/Scripts/Normal_sections_generator/Normal_section_gen.js"></script>
-<script src="../../Scripts/Individual_games_script/Common_script.js"></script>
-<script src="../../Scripts/Individual_games_script/Play_game_script.js"></script>
+<script src="../Scripts/Individual_games_script/Common_script.js"></script>
 <script src="script.js"></script>
 
 </html>

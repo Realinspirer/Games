@@ -1,17 +1,35 @@
 .featured_game{
-    height: 33em;
+    height: 40em;
+    gap:0;
+    /* margin: 0; */
+    margin-top: 0;
+    filter: none;
+    mask: linear-gradient(white 70%, transparent);
 }
 .game_feat{
-    flex: 0 0 60%;
+    border-radius: 0;
+}
+.featured_game > .game_feat:first-child{
+    margin-left: 0;
+}
+
+.game_feat{
+    flex: 0 0 100%;
+}
+.game_feat .title{
+    margin: 0 0 3em 0.7em;
 }
 
 .game_feat.game_active::after{
     content: none;
     animation: none;
 }
-
-@media screen and (max-width:950px) {
-    .game_feat{
-        flex: 0 0 70%;
-    }
+.featured_parent .scroll_button.left{
+    left: 1em;
+}
+.featured_parent .scroll_button.right{
+    right: 1em;
+}
+.game_feat .game_grad{
+    opacity: 0.4;
 }

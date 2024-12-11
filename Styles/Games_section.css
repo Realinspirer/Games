@@ -4,11 +4,19 @@
      gap: 1em;
      margin: 0 var(--margin_sides) 0 var(--margin_sides);
 } */
+:where(.all_games_desc, .all_games_desc *){
+    margin:  initial;
+    padding: initial;
+}
 
 .all_games_desc{
     margin: calc(var(--margin_sides) * 1.2) var(--margin_sides) calc(var(--margin_sides) * 1.1) var(--margin_sides);
     color: var(--button_accent_color);
     font-size: clamp(0.93em, 4.96vw, 1.8em);
+}
+.all_games_desc .small{
+    font-size: 0.65em;
+    line-height: 1.3em;
 }
 
 .feat_sec{

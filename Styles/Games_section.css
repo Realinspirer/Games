@@ -8,6 +8,10 @@
     margin:  initial;
     padding: initial;
 }
+.all_games_title{
+    --def_line_width:3em;
+    --hover_line_width:5em;
+}
 
 .all_games_desc{
     margin: calc(var(--margin_sides) * 1.2) var(--margin_sides) calc(var(--margin_sides) * 1.1) var(--margin_sides);

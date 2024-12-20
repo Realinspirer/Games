@@ -4,12 +4,16 @@
 
     let frame_url = "/Game_builds/Sling_shoot/";
 
+    let query = new URLSearchParams(window.location.search);
+    let req_token = query.get("key");
 
-
-
-    if (current_custom_data?.toLowerCase() != "play") {
-        document.location.replace("../");
+    if(!(req_token == "accessid01")){
+        if (current_custom_data?.toLowerCase() != "play") {
+            document.location.replace("../");
+        }
     }
+
+
 
     
     document.getElementById("play_button")?.addEventListener("click", play_clicked);

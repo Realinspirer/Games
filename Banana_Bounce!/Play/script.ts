@@ -3,13 +3,17 @@
     let current_custom_data = await get_json_normal_random("/JSON_data/Games_games_list/Games_gen.json", "more_games_sec", 3, "Banana Bounce!");
 
     let frame_url = "/Game_builds/Banana_bounce/";
+    
+    let query = new URLSearchParams(window.location.search);
+    let req_token = query.get("key");
 
-
-
-
-    if (current_custom_data?.toLowerCase() != "play") {
-        document.location.replace("../");
+    if(!(req_token == "accessid01")){
+        if (current_custom_data?.toLowerCase() != "play") {
+            document.location.replace("../");
+        }
     }
+
+
 
     
     document.getElementById("play_button")?.addEventListener("click", play_clicked);

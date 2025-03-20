@@ -59,7 +59,7 @@
     top: 0;
     content: "";
     z-index: 1;
-    background-image: radial-gradient(transparent, #292929b5);
+    background-image: radial-gradient(transparent, #29292971);
 }
 .hover_text{
     position: absolute;

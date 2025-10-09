@@ -17,7 +17,8 @@ body{
 
 .game_cover{
     height: 1em;
-    min-height: 35em;
+    min-height: 65vh;
+
     
     background-color: white;
 

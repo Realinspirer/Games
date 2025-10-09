@@ -17,9 +17,8 @@ body{
     border-radius: var(--big_border_radius);
     width: 75%;
     
-
-    height: clamp(380px, 126.667vw, 600px);
-    /* width: calc(100% - var(--margin_sides) * 2 ); */
+    aspect-ratio: 16 / 9;
+    /* height: clamp(380px, 126.667vw, 600px); */
     
 
     background-image: var(--play_background);
@@ -583,6 +582,10 @@ html[data-scroll='0']  body.fullscreen .scroll_button{
     }
     .game_parent > *{
         width: 100%;
+    }
+    .game_div{
+        aspect-ratio: unset;
+        height: clamp(380px, 126.667vw, 600px);
     }
    
 }
